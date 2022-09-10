@@ -2,5 +2,13 @@
 
 </script>
 <template>
-    Home
+    
+    <div>
+        Quest Bar
+        
+        
+    </div>
 </template>
+<style>
+
+</style>

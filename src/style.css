@@ -1,4 +1,5 @@
 :root {
+  --bgColor: #242424;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -6,13 +7,17 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color:var(--bgColor);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --goldD:255, 208, 0;
+  --gold: rgb(var(--goldD));
+  --submitBg:rgba(99, 99, 99, 0.479);
+  
 }
 
 a {
@@ -46,10 +51,13 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.55s ,background-color .3s, font-size .5s,width .4s;
 }
-button:hover {
-  border-color: #646cff;
+input{
+  transition:border-color 0.55s;
+}
+button:hover,input:hover {
+  border-color: #ffef64;
 }
 button:focus,
 button:focus-visible {

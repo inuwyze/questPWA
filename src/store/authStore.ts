@@ -1,18 +1,26 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import router from '../router'
 
 
 export const useAuthStore = defineStore('authStore', ()=>{
 
-    const username=ref('')
-    const password=ref('')
+    const phonenumber=ref('1111111111')
+    const password=ref('33333333')
     const isLoggedIn=ref(false)
 
     
-    const authenticateLogin=()=>{
+    const authenticateLogin= ()=>{
       // function to authenticate login on form submission
+      return new Promise((res,rej)=>{
+        setTimeout(()=>{
+          isLoggedIn.value=true
+          router.push('/')
+          res(true)
+        },1000)
+      })
     }
 
-    return {username,password,isLoggedIn}
+    return {phonenumber,password,isLoggedIn,authenticateLogin}
   
 })
